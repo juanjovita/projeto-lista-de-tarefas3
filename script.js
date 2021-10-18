@@ -6,7 +6,7 @@ function addTask(){
   console.log('Estou na função')
 }
 
-button.addEventListener('click', addTask)
+button.addEventListener('click', addTask) 
 
 
 
