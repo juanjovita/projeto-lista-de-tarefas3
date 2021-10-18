@@ -1,0 +1,117 @@
+* {
+  margin: 0; /*espaçamento externo*/
+  padding: 0; /*espaçamento interno*/
+  box-sizing: border-box;
+  outline: none; /*linha q circula o input*/
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: rgb(53, 69, 148);
+  background: rgb(238, 174, 202);
+  background: linear-gradient(90deg, #7f00ff 0%, #e100ff 100%);
+}
+
+#add-button {
+  background: #8052ec;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 5px;
+  height: 40px;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+  float: right;
+}
+
+#add-button:hover {
+  opacity: 0.8;
+}
+
+#add-button:active {
+  opacity: 0.6;
+}
+
+#tarefas {
+  list-style: none;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#input-principal {
+  height: 40px;
+  border: 2px solid silver;
+  border-radius: 5px;
+  width: 342px;
+  padding-left: 10px;
+}
+
+#del-button {
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.item-lista #del-button:hover {
+  opacity: 1;
+}
+
+#rocket-button {
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.item-lista #rocket-button:hover {
+  opacity: 1;
+}
+
+.container {
+  background: #ffffff;
+  width: 541px;
+  height: 498px;
+  border-radius: 5px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 20px;
+}
+
+.item-lista {
+  background: #f2f2f2;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px 45px;
+  cursor: pointer;
+  position: relative;
+  margin-top: 60px;
+}
+
+.nome-tarefa {
+  color: #000000;
+  font-size: 15px;
+}
+
+.fa-trash {
+  /* icon delete */
+  color: red;
+}
+
+.fa-rocket {
+  color: #4f0fc5;
+}
