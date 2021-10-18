@@ -2,7 +2,11 @@
 let input = document.getElementById('input-principal')
 let button = document.getElementById('add-button')
 
+function addTask(){
+  console.log('Estou na função')
+}
 
-console.log(button)
-console.log('meu cool')
-console.log('vai prav casa do caralho')
+button.addEventListener('click', addTask) 
+
+
+
