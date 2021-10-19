@@ -40,8 +40,9 @@ body {
 }
 
 #input-principal {
+  background: rgba(255, 255, 255, 0.5);
   height: 40px;
-  border: 2px solid silver;
+  border: 2px solid #DDA0DD;
   border-radius: 5px;
   width: 342px;
   padding-left: 10px;
@@ -82,10 +83,9 @@ body {
 }
 
 .container {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.3);
   width: 541px;
-  height: 498px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -93,7 +93,7 @@ body {
 }
 
 .item-lista {
-  background: #f2f2f2;
+  background: /*#f2f2f2*/ rgba(255, 255, 255, 0.7);
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 20px 45px;

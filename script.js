@@ -32,7 +32,7 @@ function showTask() {
 </li>`
   })
 
-  complet_list.innerHTML = new_li
+  complet_list.innerHTML = new_li 
 
 }
 
