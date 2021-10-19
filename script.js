@@ -1,12 +1,47 @@
-//variáveis
+//VARIÁVEIS
 let input = document.getElementById('input-principal')
 let button = document.getElementById('add-button')
+let task = document.getElementById('nome-tarefa')
+let complet_list = document.getElementById('tarefas')
+//ARRAYS
+let array_tarefa = []
 
-function addTask(){
-  console.log('Estou na função')
+//FUNÇÕES
+//Obs: o nome da função n pode ser o mesmo que uma variável
+
+
+//Mostrar tarefas
+function showTask() {
+  let new_li = ""
+  array_tarefa.forEach((task) => {  //forEach - monta uma li completa e guarda dentro da variável(new_li)
+    //pegar tarefa por tarefa
+    
+    //usar crase(``) p/ poder usar ${} e colocar uma variável
+    //variavel(new_li) vai receber um novo valor(${task}) + todo o html
+  new_li = new_li + `<li class="item-lista"> 
+  <button id="rocket-button">
+    <i class="fas fa-rocket"></i>
+  </button>
+
+  <p class="nome-tarefa" id="nome-tarefa">${task}</p>
+
+  <button id="del-button">
+    <i class="fas fa-trash"></i>
+  </button>
+</li>`
+  })
+
+  complet_list.innerHTML = new_li
+
 }
 
-button.addEventListener('click', addTask) 
+//Adicionar tarefas
+function addTask() {
+  array_tarefa.push(input.value) //puxar o valor do input
+
+  showTask()
+
+}
 
 
-
+button.addEventListener('click', addTask)
