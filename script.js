@@ -16,6 +16,15 @@ function addTask() {
 
   showTask()
 
+  //criar objeto dentro do array:
+  //
+  //  array_tarefa.push({
+  // task: input.value,
+  // finish: false(valor inicial)
+  //
+  //})
+ 
+
 }
 
 //Mostrar tarefas
@@ -26,8 +35,8 @@ function showTask() {
     
     //usar crase(``) p/ poder usar ${} e colocar uma variável
     //variavel(new_li) vai receber um novo valor(${task}) + todo o html
-  new_li = new_li + `<li class="item-lista"> 
-  <button id="rocket-button">
+  new_li = new_li + `<li class="item-lista finish"> 
+  <button id="rocket-button" onclick="finishTask(${index})">
     <i class="fas fa-rocket"></i>
   </button>
 
@@ -51,7 +60,11 @@ function delTask(index){
 
 }
 
+//Concluir tarefa
+function finishTask(){
+  
 
+}
 
 
 button.addEventListener('click', addTask)
