@@ -10,6 +10,13 @@ let array_tarefa = []
 //FUNÇÕES
 //Obs: o nome da função n pode ser o mesmo que uma variável
 
+//Adicionar tarefas
+function addTask() {
+  array_tarefa.push(input.value) //puxar o valor do input
+
+  showTask()
+
+}
 
 //Mostrar tarefas
 function showTask() {
@@ -44,13 +51,7 @@ function delTask(index){
 
 }
 
-//Adicionar tarefas
-function addTask() {
-  array_tarefa.push(input.value) //puxar o valor do input
 
-  showTask()
-
-}
 
 
 button.addEventListener('click', addTask)
