@@ -43,6 +43,8 @@ function showTask() {
 </li>`
   })
 
+  localStorage.getItem(JSON.stringify(array_tarefa))
+
   complet_list.innerHTML = new_li 
 
 }
@@ -57,7 +59,8 @@ function delTask(index){
 
 //Concluir tarefa
 function finishTask(index){
-  array_tarefa[index].finish = true //acessar a posição(index) do array e trasnformando em true
+  array_tarefa[index].finish =! array_tarefa[index].finish  //acessar a posição do array e inverter o valor(true or false)
+  //array_tarefa[index].finish = true //acessar a posição(index) do array e trasnformando em true
   console.log(array_tarefa)
 
   showTask()
