@@ -12,18 +12,13 @@ let array_tarefa = []
 
 //Adicionar tarefas
 function addTask() {
-  array_tarefa.push(input.value) //puxar o valor do input
-
+  array_tarefa.push({  //criar objeto dentro do array
+    task: input.value, //puxar o valor do input
+    finish: false
+  
+  }) 
+  
   showTask()
-
-  //criar objeto dentro do array:
-  //
-  //  array_tarefa.push({
-  // task: input.value,
-  // finish: false(valor inicial)
-  //
-  //})
- 
 
 }
 
@@ -35,12 +30,12 @@ function showTask() {
     
     //usar crase(``) p/ poder usar ${} e colocar uma variável
     //variavel(new_li) vai receber um novo valor(${task}) + todo o html
-  new_li = new_li + `<li class="item-lista finish"> 
+  new_li = new_li + `<li class="item-lista ${ task.finish == true ? "finish" : "" }"> 
   <button id="rocket-button" onclick="finishTask(${index})">
     <i class="fas fa-rocket"></i>
   </button>
 
-  <p class="nome-tarefa" id="nome-tarefa">${task}</p>
+  <p class="nome-tarefa ${ task.finish == true ? "finish" : "" }" id="nome-tarefa">${task.task}</p>
 
   <button id="del-button" onclick="delTask(${index})">
     <i class="fas fa-trash"></i>
@@ -61,9 +56,11 @@ function delTask(index){
 }
 
 //Concluir tarefa
-function finishTask(){
-  
+function finishTask(index){
+  array_tarefa[index].finish = true //acessar a posição(index) do array e trasnformando em true
+  console.log(array_tarefa)
 
+  showTask()
 }
 
 
