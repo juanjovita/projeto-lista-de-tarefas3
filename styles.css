@@ -61,7 +61,7 @@ body {
   transition: opacity 0.5s ease-in-out;
 }
 
-.item-lista #del-button:hover {
+.item-lista:hover #del-button {
   opacity: 1;
 }
 
@@ -78,7 +78,7 @@ body {
   transition: opacity 0.5s ease-in-out;
 }
 
-.item-lista #rocket-button:hover {
+.item-lista:hover #rocket-button {
   opacity: 1;
 }
 
