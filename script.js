@@ -7,6 +7,8 @@ let delButton = document.getElementById('index')
 //ARRAYS
 let array_tarefa = []
 
+reloadTask() //mostrar as tarefas salvas no localStorage
+
 //FUNÇÕES
 //Obs: o nome da função n pode ser o mesmo que uma variável
 
@@ -17,6 +19,9 @@ function addTask() {
     finish: false
   
   }) 
+
+  //salvar no localStorage
+  localStorage.setItem("list", JSON.stringify(array_tarefa))  //JSON.stringify(transforma o objeto em string)
   
   showTask()
 
@@ -45,6 +50,8 @@ function showTask() {
 
   complet_list.innerHTML = new_li 
 
+  localStorage.setItem("list", JSON.stringify(array_tarefa))
+
 }
 
 //Deletar tarefas
@@ -62,6 +69,15 @@ function finishTask(index){
   console.log(array_tarefa)
 
   showTask()
+}
+//Recarregar tarefas
+function reloadTask(){
+  let my_task = localStorage.getItem("list")
+
+  array_tarefa = JSON.parse(my_task)
+
+  showTask()
+
 }
 
 
