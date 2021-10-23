@@ -43,8 +43,6 @@ function showTask() {
 </li>`
   })
 
-  localStorage.getItem(JSON.stringify(array_tarefa))
-
   complet_list.innerHTML = new_li 
 
 }
