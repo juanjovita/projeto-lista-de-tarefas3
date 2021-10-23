@@ -68,9 +68,13 @@ function finishTask(index){
 
 function reloadTask(){
   let my_task = localStorage.getItem("list")
-  array_tarefa = JSON.parse(my_task)
+
+  if(my_task){
+    array_tarefa = JSON.parse(my_task)
 
   showTask()
+  }
+
 }
 
 
