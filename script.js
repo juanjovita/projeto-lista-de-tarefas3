@@ -14,12 +14,21 @@ reloadTask()
 
 //Adicionar tarefas
 function addTask() {
-  array_tarefa.push({  //criar objeto dentro do array
-    task: input.value, //puxar o valor do input
-    finish: false
+  if(input.value){
+    array_tarefa.push({  //criar objeto dentro do array
+      task: input.value, //puxar o valor do input
+      finish: false
+    
+    }) 
+
+  }
+  else{
+    alert('Digite uma tarefa!')
+  }
+
   
-  }) 
   
+  input.value =""  //limpar o campo Input quando for add uma tarefa
   showTask()
 
 }
@@ -70,12 +79,21 @@ function reloadTask(){
   let my_task = localStorage.getItem("list")
 
   if(my_task){
-    array_tarefa = JSON.parse(my_task)
+    array_tarefa = JSON.parse(my_task)  //Se o array receber uma tarefa
 
-  showTask()
+  showTask()    //mostrar tarefas
   }
 
 }
 
+//Adiconar tarefas pela tecka Enter
+function addEnter(teclas){
+  if(teclas.key === 'Enter'){  //Se a tecla pressionada for o Enter, adicionar tarefa
+    addTask()
+  }
+}
+
 
 button.addEventListener('click', addTask)
+
+document.addEventListener('keypress', addEnter)
